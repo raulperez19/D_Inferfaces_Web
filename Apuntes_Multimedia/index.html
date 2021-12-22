@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes Multimedia</title>
+    <link rel="stylesheet" type="text/css" href="css/multimedia.css">
+</head>
+<body>
+    <header>
+        <h1>Actividad tema Multimedia</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Mapas de bits</h2>
+                <div id = "contenido">
+                    <img src="imagenes/imagen-Bits.png" alt="Mapa bits">
+                </div>
+            </article>
+            <article>
+                <h2>Imagen vectorial</h2>
+                <div id = "contenido">
+                    <img src="imagenes/imagenVectorial.svg" alt="Imagen vectorial">
+                </div>
+            </article>
+            <article>
+                <h2>Imagen Picture</h2>
+                <div id = "contenido">
+                    <picture>
+                        <source media="(min-width:650px)" srcset="imagenes/buho.jpg">
+                        <source media="(min-width:465px)" srcset="imagenes/pajaro.jpg">
+                        <img src="imagenes/pato.jpg" alt="Pato" style="width:auto;">
+                    </picture>
+                </div>
+            </article>
+            <article>
+                <h2>Animación keyframes</h2>
+                <div id = "contenido">
+                    <img src="imagenes/imagekey.jpg" alt="keyimage" id="keyimage">
+                </div>
+            </article>
+            <article>
+                <h2>Canvas imagen 2D</h2>
+                <div id = "contenido">
+                    <p>Image to use:</p>
+                    <img id="canvasimage" src="imagenes/imagenCanvas.jpg" alt="Canvas image">
+              
+                    <p>Canvas to fill:</p>
+                    <canvas id="myCanvas">
+                      Your browser does not support the HTML canvas tag.</canvas>
+              
+                    <p><button onclick="myCanvas()">Try it</button></p>
+              
+                    <script>
+                      function myCanvas() {
+                        var c = document.getElementById("myCanvas");
+                        var ctx = c.getContext("2d");
+                        var img = document.getElementById("canvasimage");
+                        ctx.drawImage(img, 0, 0);
+                      }
+                    </script>
+                </div>
+            </article>
+            <article>
+                <h2>Audio</h2>
+                <div id = "contenido">
+                    <audio controls autoplay>
+                        <source src="multimedia/audio.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </article>
+            <article>
+                <h2>Video</h2>
+                <div id = "contenido">
+                    <video width="320" height="240" controls>
+                        <source src="multimedia/video.mp4" type="video/mp4">
+                      </video>
+                </div>
+            </article>
+            <article>
+                <h2>Gif</h2>
+                <div id = "contenido">
+                    <img src="imagenes/gato.gif" alt="Gato ordenador">
+                </div>
+            </article>
+          
+            <article>
+                <h2>CSS Image Reflection</h2>
+                
+                <div id="contenido">
+                    <img src="imagenes/imagenReflejo.jpg" id="imgReflejo">
+                </div>
+            </article>
+          
+            <article>
+                <h2>Rounded Images</h2>
+                <div id="contenido">
+                    <img src="imagenes/imagenReverso.jpg" alt="emblem" id="imgReverse">
+                </div>
+            </article>
+        </section>
+        <div class="licencias">
+            <div class = "boton">
+                <a href="https://www.w3schools.com" target="_blank">Licencias</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <address><b>Raúl Pérez Peña - raulitopp19@gmail.com </b></address>
+		&copy; Copyright 2021 Todos los derechos reservados
+    </footer>
+</body>
+</html>
