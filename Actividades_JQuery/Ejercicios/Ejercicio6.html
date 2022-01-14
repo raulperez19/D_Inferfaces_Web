@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ejercicio 6</title>
+    <style>
+        body {
+            margin: 3rem;
+            background-image: url(../imagenes/fondo.jpg);
+        }
+
+        h1{text-shadow: 2px 2px 4px #a09a9a; color: rgb(51, 50, 50);}
+        label{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px;}
+        input{background-color: transparent; font-size: 20px; font-weight: bold;}
+
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 6</h1>
+    <br>
+    <form>
+        <label for="">Despliegue de Aplicaciones Web </label>
+        <input type="text" class="notas"><br><br>
+
+        <label for="">Diseño de Interfaces </label>
+        <input type="text" class="notas"><br><br>
+
+        <label for="">Desarrollo Web en Entorno Cliente </label>
+        <input type="text" class="notas"><br><br>
+
+        <label for="">Desarrollo Web en Entorno Servidor </label>
+        <input type="text" class="notas"><br><br>
+
+        <label for="">Inglés</label>
+        <input type="text" class="notas"><br><br>
+
+        <label for="">Empresa e Iniciativa Emprendedora </label>
+        <input type="text" class="notas"><br><br>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            //el fondo se pone rojo
+            $(".notas").focus(function () {
+                $(this).css("color", "red");
+            });
+            // el fondo se pone verde
+            $(".notas").blur(function () {
+                $(this).css("color", "green");
+            });
+        });
+    </script>
+</body>
+
+</html>

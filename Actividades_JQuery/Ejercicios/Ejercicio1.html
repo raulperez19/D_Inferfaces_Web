@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body{ margin:3rem;background-image: url(../imagenes/fondo.jpg);}
+
+        .contenido{
+            background-color: blueviolet;
+            width: 30px;
+            height: 30px;
+            padding: 20px;
+        }
+
+        h1{text-shadow: 2px 2px 4px #a09a9a; color: rgb(51, 50, 50);}
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    
+    <div class = "contenido">
+        <a id="ocultar">Raúl</a>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $("#ocultar").click(function(){
+                $(".contenido").hide(5000);
+                $(".contenido").show(3000);
+                $(".contenido").toggle(200);
+                $(".contenido").show(2000);
+                alert("He tardado 2 segundos en mostrarme");
+            });
+
+        });
+    </script>
+</body>
+</html>

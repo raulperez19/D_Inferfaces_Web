@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ejercicio 5</title>
+    <style>
+        body{ margin:3rem;background-image: url(../imagenes/fondo.jpg);}
+         
+        h1{text-shadow: 2px 2px 4px #a09a9a; color: rgb(51, 50, 50);}
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 5</h1>
+    <br>
+    <form>
+        <label><input type="checkbox" id="mayorEdad" value="mayoredad">Mayor de edad</label>
+        <label><input type="checkbox" id="socio" value="socio">Socio</label>
+        <label><input type="checkbox" id="tarjetaRegalo" value="tarjetaregalo">Tarjeta regalo</label>
+    </form>
+    <br>
+    <br>
+    <table border="2">
+        <tr>
+            <td id="fila1">Debe ir acompañado de un adulto</td>
+        </tr>
+        <tr>
+            <td id="fila2">No puede traer invitados</td>
+        </tr>
+        <tr>
+            <td id="fila3">Abonará 5% de las tasas</td>
+        </tr>
+    </table>
+
+    <!--Jquery-->
+    <script>
+        $(document).ready(function () {
+            //Si se hace click se producen dos eventos
+            $('#mayorEdad').on('click', function () {
+                //En caso de que esté seleccionado se oculta la fila
+                if ($(this).is(':checked')) {
+                    $('#fila1').fadeOut();
+                //En caso de que no esté seleccionado se muestra la fila
+                } else {
+                    $('#fila1').fadeIn();
+                }
+            });
+            $('#socio').on('click', function () {
+                if ($(this).is(':checked')) {
+                    $('#fila2').fadeOut();
+                } else {
+                    $('#fila2').fadeIn();
+                }
+            });
+            $('#tarjetaRegalo').on('click', function () {
+                if ($(this).is(':checked')) {
+                    $('#fila3').fadeOut();
+                } else {
+                    $('#fila3').fadeIn();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

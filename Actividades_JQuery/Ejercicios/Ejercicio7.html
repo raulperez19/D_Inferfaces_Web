@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ejercicio 7</title>
+    <style>
+        body{ margin:3rem;background-image: url(../imagenes/fondo.jpg);}
+
+        h1{text-shadow: 2px 2px 4px #a09a9a; color: rgb(51, 50, 50);}
+        p{font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;}
+
+        .selected{width: max-content;}
+        
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 7</h1>
+    <br>
+    <div class="selected">
+        <p> Divs cuyo padre sea de la clase selected aparezcan con el fondo en color amarillo.</p>
+    </div>
+    <div>
+        <p>Mi padre no es la clase selected </p>
+    </div>
+    <div class="selected">
+        <p>Metodo children</p>
+    </div>
+    <div>
+        <p>Adios :)</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            //Se muestra solamente los div de la clase selected en amarillo
+            $(".selected").children().css({'background-color':'rgb(255, 255, 149)'});
+        })
+    </script>   
+</body>
+
+</html>

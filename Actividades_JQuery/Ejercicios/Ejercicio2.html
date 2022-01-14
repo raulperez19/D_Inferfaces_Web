@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ejercicio 2</title>
+    <style>
+        body{ margin:3rem;background-image: url(../imagenes/fondo.jpg);}
+        #boton {
+           margin-top: 20px;
+           font-size: 35px;
+           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           background-color: rgb(116, 14, 14); 
+           color: rgb(99, 161, 170);
+           padding: 15px;
+        }
+
+        h1{text-shadow: 2px 2px 4px #a09a9a; color: rgb(51, 50, 50);}
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 2</h1>
+    <button id="boton">Raúl Pérez</button>
+    
+    <script>
+        $(document).ready(function () {
+            $("#boton").hover(function () {
+                    setTimeout(function(){
+                        $("#boton").css({'opacity':'0.3'});
+                    },400)},
+                function () {
+                    $("#boton").css({'background-color': 'rgb(116, 14, 14); ','color':'rgb(99, 161, 170);','opacity':'1'});
+                });
+        });
+    </script>
+</body>
+
+</html>
